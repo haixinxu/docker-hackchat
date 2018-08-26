@@ -30,4 +30,6 @@ make
 ADD client.js /hack.chat/client/
 
 EXPOSE 6060
+EXPOSE 8080
+
 CMD cd /hack.chat && npm start
