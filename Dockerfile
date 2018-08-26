@@ -5,16 +5,12 @@
 #
 
 # Pull base image.
-FROM debian:stable
+FROM alpine:latest
 
-MAINTAINER hihouhou < hihouhou@hihouhou.com >
+MAINTAINER jerryxu < jxhx@protonmail.com >
 
 # Update & install packages
-RUN apt-get update && \
-    apt-get install -y git python make g++ curl
-
-RUN curl --silent --location https://deb.nodesource.com/setup_0.12 | bash - && \
-apt-get install --yes nodejs
+RUN apk --no-cache add ca-certificates git nodejs npm
 
 # install hackchat server
 RUN git clone https://github.com/AndrewBelt/hack.chat.git && \
