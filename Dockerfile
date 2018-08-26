@@ -18,9 +18,9 @@ cd hack.chat && \
 npm install
 ADD config.json /hack.chat/
 
-#install pm2
+#install deps
 RUN cd /hack.chat && \
-npm install pm2 -g
+npm install
 
 
 # install hackchat client
@@ -30,4 +30,4 @@ make
 ADD client.js /hack.chat/client/
 
 EXPOSE 6060
-CMD cd /hack.chat && pm2 start /hack.chat/server.js && cd /hack.chat/client && http-server
+CMD cd /hack.chat && npm start
