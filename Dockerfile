@@ -32,4 +32,7 @@ ADD client.js /hack.chat/client/
 EXPOSE 6060
 EXPOSE 8080
 
+USER v2ray
+ENV USER=v2ray
+
 CMD cd /hack.chat && npm start
