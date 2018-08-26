@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM debian:latest
+FROM debian:stable
 
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
