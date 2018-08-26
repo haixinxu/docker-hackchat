@@ -10,7 +10,7 @@ FROM alpine:latest
 MAINTAINER jerryxu < jxhx@protonmail.com >
 
 # Update & install packages
-RUN apk --no-cache add ca-certificates git nodejs npm
+RUN apk --no-cache add ca-certificates git nodejs npm make
 
 # install hackchat server
 RUN git clone https://github.com/AndrewBelt/hack.chat.git && \
