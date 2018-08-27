@@ -13,12 +13,12 @@ MAINTAINER jerryxu < jxhx@protonmail.com >
 RUN apk --no-cache add ca-certificates git nodejs npm make
 
 # install hackchat server
-RUN git clone https://github.com/AndrewBelt/hack.chat.git && \
+RUN git clone https://github.com/hack-chat/main.git && \
 cd hack.chat && \
 npm install
 ADD config.json /hack.chat/
 
-RUN npm install ws@1.1.1
+#RUN npm install ws@1.1.1
 
 #install deps
 RUN cd /hack.chat && \
