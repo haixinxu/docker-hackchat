@@ -27,8 +27,8 @@ npm install
 
 # install hackchat client
 RUN cd /hack.chat/client && \
-npm install -g less jade http-server && \
-make
+npm install
+
 ADD client.js /hack.chat/client/
 
 EXPOSE 6060
