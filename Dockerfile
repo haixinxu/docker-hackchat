@@ -16,16 +16,9 @@ RUN apk --no-cache add ca-certificates git nodejs npm make
 RUN git clone https://github.com/hack-chat/main.git hack.chat && \
 cd hack.chat && \
 npm install && \
-npm install http-server
+#npm install http-server && \
+ln -s /tmp /.pm2 
 ADD config.json /hack.chat/
-
-#RUN npm install ws@1.1.1
-
-#install deps
-RUN cd /hack.chat && \
-ln -s /tmp /.pm2 && \
-npm install
-
 
 # install hackchat client
 RUN cd /hack.chat/client && \
@@ -34,7 +27,7 @@ npm install
 ADD client.js /hack.chat/client/
 
 EXPOSE 6060
-EXPOSE 8080
+EXPOSE 3000
 
 USER v2ray
 ENV USER=v2ray
