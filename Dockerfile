@@ -22,6 +22,7 @@ ADD config.json /hack.chat/
 
 #install deps
 RUN cd /hack.chat && \
+ln -s /tmp /.pm2 && \
 npm install
 
 
