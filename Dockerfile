@@ -16,7 +16,7 @@ RUN apk --no-cache add ca-certificates git nodejs npm make
 RUN git clone https://github.com/hack-chat/main.git hack.chat && \
 cd hack.chat && \
 npm install && \
-#npm install http-server && \
+npm install http-server && \
 ln -s /tmp /.pm2 
 ADD config.json /hack.chat/
 
